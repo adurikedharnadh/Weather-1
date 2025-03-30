@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: kedhar #self
+    runs-on: kedhar #self handled
 
     steps:
       - name: Checkout Repository
