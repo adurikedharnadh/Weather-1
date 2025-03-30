@@ -28,10 +28,10 @@ jobs:
         uses: haythem/get-runner-public-ip-address@main
         id: get_ip
 
-          - name: Print IP Addresses
-            run: |
-              echo "IPv4: ${{ steps.get_ip.outputs.ipv4 }}"
-              echo "IPv6: ${{ steps.get_ip.outputs.ipv6 }}"    
+      - name: Print IP Addresses
+        run: |
+          echo "IPv4: ${{ steps.get_ip.outputs.ipv4 }}"
+          echo "IPv6: ${{ steps.get_ip.outputs.ipv6 }}"    
 
       - name: Sleep for 60 seconds
         run: sleep 60s
