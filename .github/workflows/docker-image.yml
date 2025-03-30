@@ -32,6 +32,6 @@ jobs:
         run: |
           echo "Public IP: ${{ steps.public_ip.outputs.ip }}"
 
-      - name: Sleep for 60 seconds
-        run: sleep 60s
+      - name: Sleep for 120 seconds
+        run: sleep 120s
         shell: bash   
