@@ -27,3 +27,8 @@ jobs:
       - name: Sleep for 120 seconds
         run: sleep 120s
         shell: bash   
+
+      - name: Clean up
+        if: always()
+        run: |
+          docker compose down
