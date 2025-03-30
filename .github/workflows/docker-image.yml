@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: kedhar
 
     steps:
       - name: Checkout Repository
@@ -23,14 +23,6 @@ jobs:
       - name: Build and Run Docker Container
         run: |
           docker compose up -d
-          
-      - name: Get Runner Public IP
-        uses: haythem/public-ip@v1.2
-        id: public_ip
-
-      - name: Print IP Addresses
-        run: |
-          echo "Public IP: ${{ steps.public_ip.outputs.ip }}"
 
       - name: Sleep for 120 seconds
         run: sleep 120s
