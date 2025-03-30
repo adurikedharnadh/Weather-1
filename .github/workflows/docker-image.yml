@@ -32,6 +32,14 @@ jobs:
         run: |
           echo "Public IP: ${{ steps.public_ip.outputs.ip }}"
 
+      - name: 🔎 Check IP
+        run: curl https://api.ipify.org    
+
       - name: Sleep for 120 seconds
         run: sleep 120s
         shell: bash   
+
+      - name: Clean up
+        if: always()
+        run: |
+          docker compose down
